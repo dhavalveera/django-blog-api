@@ -1,3 +1,2 @@
 .venv
-.idea
-django_blog_api/.env
+.env
