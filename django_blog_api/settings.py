@@ -43,6 +43,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Django REST Framework for creating REST APIs
+    'rest_framework',
+    'rest_framework.authtoken',
+
+    # User Created Apps
+    'authentication'
 ]
 
 MIDDLEWARE = [
@@ -56,6 +63,13 @@ MIDDLEWARE = [
     # WhiteNoise for serving static files when DEBUG =FALSE
     "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
 
 ROOT_URLCONF = 'django_blog_api.urls'
 
@@ -88,6 +102,8 @@ DATABASES = {
     }
 }
 
+# Auth Model for Authentication
+AUTH_USER_MODEL = 'authentication.CustomUser'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

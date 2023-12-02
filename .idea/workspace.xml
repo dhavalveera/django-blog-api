@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad7729a1-85fc-4481-86b1-fabf2e14731a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/django.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/django.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_blog_api/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_blog_api/django_blog_api/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_blog_api/django_blog_api/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_blog_api/django_blog_api/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_blog_api/django_blog_api/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_blog_api/django_blog_api/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_blog_api/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_blog_api/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_blog_api/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_blog_api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_blog_api/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
