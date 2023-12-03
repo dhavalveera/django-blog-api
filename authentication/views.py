@@ -2,9 +2,10 @@ from django.contrib.auth import authenticate, login as django_login, logout
 from rest_framework import status
 from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.request import Request
 from rest_framework.response import Response
+
 
 from .serializer import UserLoginSerializer, UserRegistrationSerializer
 
@@ -37,15 +38,16 @@ def login(request: Request):
                     token, _ = Token.objects.get_or_create(user=user)
                     return Response({'token': token.key}, status=status.HTTP_200_OK)
                 else:
-                    return Response({'error': 'either Account is not Verified or Account is deleted'},
+                    return Response({'error': 'Sorry, your Account is not verified'},
                                     status=status.HTTP_401_UNAUTHORIZED)
             return Response({'error': "Invalid Credentials, Please check and re-try"},
                             status=status.HTTP_401_UNAUTHORIZED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['POST'])
-@permission_classes([AllowAny])
+@permission_classes([IsAuthenticated])
 def logout_view(request: Request):
     if request.method == 'POST':
         tkn = request.data.get('token')
